@@ -92,7 +92,7 @@ const Carlist = () => {
       body: JSON.stringify(newCar)
     })
       .then(res => fetchCars())
-      .then(res => setMessage("Car save successfully"))
+      .then(res => setMessage("Car saved"))
       .then(res => setOpen(true))
       .catch(err => console.error(err));
   };
@@ -106,6 +106,8 @@ const Carlist = () => {
       body: JSON.stringify(car)
     })
       .then(res => fetchCars())
+      .then(res => setMessage("Car updated"))
+      .then(res => setOpen(true))
       .catch(err => console.error(err));
   };
 
